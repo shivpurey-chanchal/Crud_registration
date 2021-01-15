@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<h3><a class="btn btn-success" href="/employee"><i class="fa fa-plus"></i>Create New Employee</a></h3>
+<table class="table text-danger">
+    <thead>
+        <tr>
+            <th>Full Name:</th>
+            <th>Email :</th>
+            <th>Mobile:</th>
+            <th>City:</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.fullName}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.mobile}}</td>
+            <td>{{this.city}}</td>
+            <td>
+                <a href="/employee/{{this._id}}"><i class="fa fa-pencil fa-lg"></i></a>
+                <a><i class="fa fa-trash fa-lg"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+
+</table>
